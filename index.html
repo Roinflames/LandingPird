@@ -82,35 +82,179 @@
 						<nav>
 							<ul>
 								<li><a href="http://pird.dyndns.org/owncloud">Nube</a></li>
-								<li><a href="http://pird.dyndns.org:3000">My Energy</a></li>
+								<li><a href="#myEnergy">My Energy</a></li>
 							</ul>
 						</nav>
 					</header>
 
 				<!-- Main -->
 					<div id="main">
-
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+						<!-- Work -->
+							<article id="docs">
+								<h2 class="major">Documentación</h2>
+								<p>
+									Especificación de las funciones que cumple el sistema:
+								</p>
+								<ul>
+									<li><a href="#config">Configuración</a></li>
+									<li><a href="#models">Modelos</a></li>
+									<li><a href="#resources">Recursos</a></li>
+									<li><a href="#services">Servicios</a></li>
+								</ul>
+								<a href="#myEnergy">Volver</a>
 							</article>
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+						<<!-- Configuración -->
+							<article id="config">
+								<h2 class="major">Configuración</h2>
+
+								<a href="#docs">Volver</a>
+							</article>
+
+						<<!-- Modelos -->
+							<article id="models">
+								<h2 class="major">Modelos</h2>
+
+								<a href="#docs">Volver</a>
+							</article>
+						<!-- kW -->
+							<article id="kW">
+								<h2 class="major">Consumo</h2>
+								<p>
+									<li><a href="#kW">Consumo de kW/hora</a></li>
+								</p>
+								<a href="#services">Volver</a>
+							</article>
+
+						<!-- Clima -->
+							<article id="weather">
+								<h2 class="major">Clima</h2>
+								<p>
+									<li><a href="#weather">Accuweather</a></li>
+								</p>
+								<a href="#services">Volver</a>
+							</article>
+
+						<!-- SERVICIOS -->
+							<article id="services">
+								<h2 class="major">Servicios</h2>
+								<p>
+									<li><a href="#weather">Clima</a></li>
+									<li><a href="#kW">Valor kW/hora</a></li>
+								</p>
+								<a href="#docs">Volver</a>
+							</article>
+
+						<!-- Usuarios -->
+							<article id="users">
+								<h2 class="major">Usuarios</h2>
+								<p>
+									<li>GET https://www.neosolar.cl/api/user </li>
+									<ul> Petición HTTP que retorna la totalidad de usuarios registrados en el servidor.</ul>
+									<li>GET https://www.neosolar.cl/api/user/:user_id </li>
+									<ul>Petición HTTP que retorna el usuario correspondiente al ID único indicado en la URI.</ul>
+									<li>POST https://www.neosolar.cl/api/user </li>
+									<ul> Petición HTTP que requiere los parámetros name (email) y password en el header de esta. Con estas credenciales se crea un registro en la base de datos con ID único, con el cual el usuario podrá loguear y utilizar la aplicación.</ul>
+									<li>PUT https://www.neosolar.cl/api/user/:user_id </li>
+									<ul> Petición HTTP que actualiza la información de un usuario registrado mediante los parámetros indicados en los headers de la misma, para modificar a un usuario específico se debe indicar su ID único en la URI.</ul>
+									<li>DELETE https://www.neosolar.cl/api/user/:user_id </li>
+									<ul> Petición HTTP que borra la información de un usuario registrado con ID único indicado en la URI.</ul>
+
+								</p>
+								<a href="#resources">Volver</a>
+							</article>
+
+						<!-- Dispositivos -->
+							<article id="devices">
+								<h2 class="major">Dispositivos</h2>
+								<p>
+									<li>GET https://www.neosolar.cl/api/device </li>
+									<ul> Petición HTTP que retorna la totalidad de dispositivos registrados en el servidor.</ul>
+									<li>GET https://www.neosolar.cl/api/device/:device_id </li>
+									<ul>Petición HTTP que retorna el dispositivo correspondiente al ID único indicado en la URI.</ul>
+									<li>POST https://www.neosolar.cl/api/device </li>
+									<ul> Petición HTTP que requiere los parámetros name (email) y password en el header de esta. Con estas credenciales se crea un registro en la base de datos con ID único, con el cual el dispositivo podrá autenticarse y registrar mediciones.</ul>
+									<li>PUT https://www.neosolar.cl/api/device/:device_id </li>
+									<ul> Petición HTTP que actualiza la información de un dispositivo registrado mediante los parámetros indicados en los headers de la misma, para modificar a un dispositivo específico se debe indicar su ID único en la URI.</ul>
+									<li>DELETE https://www.neosolar.cl/api/device/:device_id </li>
+									<ul> Petición HTTP que borra la información de un dispositivo registrado con ID único indicado en la URI.</ul>
+								</p>
+								<a href="#resources">Volver</a>
+							</article>
+
+							<!-- Mediciones -->
+							<article id="measurements">
+								<h2 class="major">Mediciones</h2>
+								<li>GET https://www.neosolar.cl/api/device </li>
+								<ul> Petición HTTP.</ul>
+								<li>GET https://www.neosolar.cl/api/device/:device_id </li>
+								<ul> Petición HTTP.</ul>
+								<li>POST https://www.neosolar.cl/api/device </li>
+								<ul> Petición HTTP.</ul>
+								<li>PUT https://www.neosolar.cl/api/device/:device_id </li>
+								<ul> Petición HTTP.</ul>
+								<li>DELETE https://www.neosolar.cl/api/device/:device_id </li>
+								<ul> Petición HTTP.</ul>
+								<a href="#resources">Volver</a>
+							</article>
+
+							<!-- Autenticación -->
+							<article id="auth">
+								<h2 class="major">Autenticación</h2>
+								<li>POST https://www.neosolar.cl/api/signin </li>
+								<ul> Petición HTTP que por medio del email y password presentes en el header de la misma autentica un usuario para permitir el acceso a la aplicación, el valor de retorno es un token de autenticación.</ul>
+								<li>POST https://www.neosolar.cl/api/signup </li>
+								<ul> Petición HTTP que por medio del email y password presentes en el header de la misma crea un registro de usuario en la base de datos con ID único para permitir la autenticación de este usuario.</ul>
+								<li>POST https://www.neosolar.cl/api/google </li>
+								<ul> Petición HTTP.</ul>
+								<li>POST https://www.neosolar.cl/api/googleNative </li>
+								<ul> Petición HTTP.</ul>
+								<li>POST https://www.neosolar.cl/api/deviceSignin </li>
+								<ul> Petición HTTP.</ul>
+								<a href="#resources">Volver</a>
+							</article>
+
+							<!-- RECURSOS -->
+							<article id="resources">
+								<h2 class="major">Recursos</h2>
+								<p>
+									Detalle de los grupos de recursos disponibles:
+								</p>
+								<ul>
+									<li><a href="#auth">Autenticación</a></li>
+									<li><a href="#devices">Dispositivos</a></li>
+									<li><a href="#measurements">Mediciones</a></li>
+									<li><a href="#users">Usuarios</a></li>
+								</ul>
+								<a href="#docs">Volver</a>
 							</article>
 
 						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
+							<article id="myEnergy">
+								<h2 class="major">My Energy [En construcción]</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<p>Prototipo para la inserción de los Sistemas Fotovoltaicos de Potencia al contexto del Internet de las Cosas.</p>
+								<nav>
+									<p>
+										Contenido:
+									</p>
+									<ul>
+										<!--<li><a href="#myEnergy">Aplicación</a></li>-->
+										<li><a href="#docs">Documentación</a></li>
+									</ul>
+								</nav>
+								<ul>
+									<a href="#myEnergy">#Redes Inteligentes | </a>
+									<a href="#myEnergy">#Energías Renovables | </a>
+									<a href="#myEnergy">#Internet de las Cosas | </a>
+									<a href="#myEnergy">#Sistemas en tiempo real | </a>
+									<a href="#myEnergy">#tag | </a>
+									<a href="#myEnergy">#tag  </a>
+								</ul>
+								<p>
+									<a href="#services">Volver</a>
+								</p>
+
 							</article>
 
 						<!-- Contact -->
