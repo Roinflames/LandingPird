@@ -104,14 +104,14 @@
 								<a href="#myEnergy">Volver</a>
 							</article>
 
-						<<!-- Configuración -->
+						<!-- Configuración -->
 							<article id="config">
 								<h2 class="major">Configuración</h2>
 
 								<a href="#docs">Volver</a>
 							</article>
 
-						<<!-- Modelos -->
+						<!-- Modelos -->
 							<article id="models">
 								<h2 class="major">Modelos</h2>
 
@@ -149,15 +149,15 @@
 							<article id="users">
 								<h2 class="major">Usuarios</h2>
 								<p>
-									<li>GET https://www.neosolar.cl/api/user </li>
+									<li>GET /api/user </li>
 									<ul> Petición HTTP que retorna la totalidad de usuarios registrados en el servidor.</ul>
-									<li>GET https://www.neosolar.cl/api/user/:user_id </li>
+									<li>GET /api/user/:user_id </li>
 									<ul>Petición HTTP que retorna el usuario correspondiente al ID único indicado en la URI.</ul>
-									<li>POST https://www.neosolar.cl/api/user </li>
+									<li>POST /api/user </li>
 									<ul> Petición HTTP que requiere los parámetros name (email) y password en el header de esta. Con estas credenciales se crea un registro en la base de datos con ID único, con el cual el usuario podrá loguear y utilizar la aplicación.</ul>
-									<li>PUT https://www.neosolar.cl/api/user/:user_id </li>
+									<li>PUT /api/user/:user_id </li>
 									<ul> Petición HTTP que actualiza la información de un usuario registrado mediante los parámetros indicados en los headers de la misma, para modificar a un usuario específico se debe indicar su ID único en la URI.</ul>
-									<li>DELETE https://www.neosolar.cl/api/user/:user_id </li>
+									<li>DELETE /api/user/:user_id </li>
 									<ul> Petición HTTP que borra la información de un usuario registrado con ID único indicado en la URI.</ul>
 
 								</p>
@@ -168,15 +168,15 @@
 							<article id="devices">
 								<h2 class="major">Dispositivos</h2>
 								<p>
-									<li>GET https://www.neosolar.cl/api/device </li>
+									<li>GET /api/device </li>
 									<ul> Petición HTTP que retorna la totalidad de dispositivos registrados en el servidor.</ul>
-									<li>GET https://www.neosolar.cl/api/device/:device_id </li>
+									<li>GET /api/device/:device_id </li>
 									<ul>Petición HTTP que retorna el dispositivo correspondiente al ID único indicado en la URI.</ul>
-									<li>POST https://www.neosolar.cl/api/device </li>
+									<li>POST /api/device </li>
 									<ul> Petición HTTP que requiere los parámetros name (email) y password en el header de esta. Con estas credenciales se crea un registro en la base de datos con ID único, con el cual el dispositivo podrá autenticarse y registrar mediciones.</ul>
-									<li>PUT https://www.neosolar.cl/api/device/:device_id </li>
+									<li>PUT /api/device/:device_id </li>
 									<ul> Petición HTTP que actualiza la información de un dispositivo registrado mediante los parámetros indicados en los headers de la misma, para modificar a un dispositivo específico se debe indicar su ID único en la URI.</ul>
-									<li>DELETE https://www.neosolar.cl/api/device/:device_id </li>
+									<li>DELETE /api/device/:device_id </li>
 									<ul> Petición HTTP que borra la información de un dispositivo registrado con ID único indicado en la URI.</ul>
 								</p>
 								<a href="#resources">Volver</a>
@@ -185,15 +185,15 @@
 							<!-- Mediciones -->
 							<article id="measurements">
 								<h2 class="major">Mediciones</h2>
-								<li>GET https://www.neosolar.cl/api/device </li>
+								<li>GET /api/device </li>
 								<ul> Petición HTTP.</ul>
-								<li>GET https://www.neosolar.cl/api/device/:device_id </li>
+								<li>GET /api/device/:device_id </li>
 								<ul> Petición HTTP.</ul>
-								<li>POST https://www.neosolar.cl/api/device </li>
+								<li>POST /api/device </li>
 								<ul> Petición HTTP.</ul>
-								<li>PUT https://www.neosolar.cl/api/device/:device_id </li>
+								<li>PUT /api/device/:device_id </li>
 								<ul> Petición HTTP.</ul>
-								<li>DELETE https://www.neosolar.cl/api/device/:device_id </li>
+								<li>DELETE /api/device/:device_id </li>
 								<ul> Petición HTTP.</ul>
 								<a href="#resources">Volver</a>
 							</article>
@@ -201,15 +201,15 @@
 							<!-- Autenticación -->
 							<article id="auth">
 								<h2 class="major">Autenticación</h2>
-								<li>POST https://www.neosolar.cl/api/signin </li>
+								<li>POST /api/signin </li>
 								<ul> Petición HTTP que por medio del email y password presentes en el header de la misma autentica un usuario para permitir el acceso a la aplicación, el valor de retorno es un token de autenticación.</ul>
-								<li>POST https://www.neosolar.cl/api/signup </li>
+								<li>POST /api/signup </li>
 								<ul> Petición HTTP que por medio del email y password presentes en el header de la misma crea un registro de usuario en la base de datos con ID único para permitir la autenticación de este usuario.</ul>
-								<li>POST https://www.neosolar.cl/api/google </li>
+								<li>POST /api/google </li>
 								<ul> Petición HTTP.</ul>
-								<li>POST https://www.neosolar.cl/api/googleNative </li>
+								<li>POST /api/googleNative </li>
 								<ul> Petición HTTP.</ul>
-								<li>POST https://www.neosolar.cl/api/deviceSignin </li>
+								<li>POST /api/deviceSignin </li>
 								<ul> Petición HTTP.</ul>
 								<a href="#resources">Volver</a>
 							</article>
